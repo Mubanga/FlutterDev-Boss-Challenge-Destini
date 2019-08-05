@@ -79,6 +79,7 @@ class StoryModel {
             case 2:
               {
                 _storyNumber = 3;
+                restart();
               }
               break;
           }
@@ -90,11 +91,13 @@ class StoryModel {
             case 1:
               {
                 _storyNumber = 5;
+                restart();
               }
               break;
             case 2:
               {
                 _storyNumber = 4;
+                restart();
               }
               break;
           }
@@ -103,7 +106,9 @@ class StoryModel {
     }
   }
 
-//TODO: Step 22 - In nextStory() if the storyNumber is equal to 3 or 4 or 5, that means it's the end of the game and it should call a method called restart() that resets the storyNumber to 0.
+  void restart() {
+    _storyNumber = 0;
+  }
 
 //TODO: Step 27 - Create a method called buttonShouldBeVisible() which checks to see if storyNumber is 0 or 1 or 2 (when both buttons should show choices) and return true if that is the case, else it should return false.
 }
