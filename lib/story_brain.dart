@@ -2,6 +2,7 @@ import 'story.dart';
 
 class StoryModel {
   int _storyNumber = 0;
+//  bool _isStoryDone = false;
   List<Story> _storyData = [
     Story(
         storyTitle:
@@ -35,6 +36,7 @@ class StoryModel {
   ];
 
   String getStory() {
+    print("StoryNumber: $_storyNumber");
     return _storyData[_storyNumber].storyTitle;
   }
 
@@ -45,8 +47,6 @@ class StoryModel {
   String getChoice2() {
     return _storyData[_storyNumber].choice2;
   }
-
-//TODO: Step 25 - Change the storyNumber property into a private property so that only please story_brain.dart has access to it. You can do this by right clicking on the name (storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
 
   void nextStory(int choiceNumber) {
     switch (_storyNumber) {
@@ -77,7 +77,7 @@ class StoryModel {
             case 2:
               {
                 _storyNumber = 3;
-                restart();
+                //   restart();
               }
               break;
           }
@@ -89,13 +89,64 @@ class StoryModel {
             case 1:
               {
                 _storyNumber = 5;
-                restart();
+                //   restart();
               }
               break;
             case 2:
               {
                 _storyNumber = 4;
+                //   restart();
+              }
+              break;
+          }
+        }
+        break;
+      case 3:
+        {
+          switch (choiceNumber) {
+            case 1:
+              {
                 restart();
+              }
+              break;
+            case 2:
+              {
+                //  _storyNumber = 4;
+                //   restart();
+              }
+              break;
+          }
+        }
+        break;
+      case 4:
+        {
+          switch (choiceNumber) {
+            case 1:
+              {
+                restart();
+              }
+              break;
+            case 2:
+              {
+                //  _storyNumber = 4;
+                //   restart();
+              }
+              break;
+          }
+        }
+        break;
+      case 5:
+        {
+          switch (choiceNumber) {
+            case 1:
+              {
+                restart();
+              }
+              break;
+            case 2:
+              {
+                //  _storyNumber = 4;
+                //   restart();
               }
               break;
           }
@@ -103,6 +154,10 @@ class StoryModel {
         break;
     }
   }
+
+//  bool isStoryComplete() {
+//    return _isStoryDone;
+//  }
 
   void restart() {
     _storyNumber = 0;
