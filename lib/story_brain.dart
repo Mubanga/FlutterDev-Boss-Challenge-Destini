@@ -34,8 +34,6 @@ class StoryModel {
         choice2: '')
   ];
 
-
-
   String getStory() {
     return _storyData[_storyNumber].storyTitle;
   }
@@ -48,7 +46,7 @@ class StoryModel {
     return _storyData[_storyNumber].choice2;
   }
 
-//TODO: Step 25 - Change the storyNumber property into a private property so that only story_brain.dart has access to it. You can do this by right clicking on the name (storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
+//TODO: Step 25 - Change the storyNumber property into a private property so that only please story_brain.dart has access to it. You can do this by right clicking on the name (storyNumber) and selecting Refactor -> Rename to make the change across all the places where it's used.
 
   void nextStory(int choiceNumber) {
     switch (_storyNumber) {
